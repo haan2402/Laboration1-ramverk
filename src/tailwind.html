@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-500 font-sans">
+    <!--Navigeringen-->
+    <nav class="bg-gray-800 text-white flex justify-center p-4 gap-6 md:gap-10 md:text-2xl">
+        <a href="index.html" class="hover:underline font-bold">Startsida</a>
+        <a href="bootstrap.html" class="hover:underline font-bold">Bootstrap</a>
+        <a href="tailwind.html" class="hover:underline font-bold">Tailwind</a>
+    </nav>
+
+    <!--innehåll för sidan-->
+    <main class="mx-auto max-w-3xl p-4 m-3 md:p-10 bg-white md:rounded-2xl md:shadow-2xl">
+        <h1 class="text-2xl md:text-4xl font-bold text-center mb-7">Tailwind CSS-Ramverk</h1>
+        
+        <!--info om tailwind-->
+        <section class="mb-5">
+            <h2 class="font-semibold mb-2 md:text-2xl">Om Tailwind</h2>
+            <p><a href="https://tailwindcss.com/" target="_blank" class="text-blue-500 underline">Länk till Tailwinds webbplats</a></p>
+            <p class="mt-2 ">Tailwind CSS är ett "Utility-first-ramverk. I detta ramverk bygger man sina komponenter själv med olika klasser i HTML. 
+                Man har mer kontroll och kan snabbare göra styling utan att man skriver ny CSS. Fördelar med Tailwind är att det är väldigt flexibelt, CSS-filen är välidgt liten,
+                samt kan man göra unik design. Några nackdelar är att det lätt kan bli rörigt med många klasser på de olika HTML-elementen, kräver att man gör "build-steg" och den har ingen färdig design.</p>
+        </section>
+
+        <!--utvärdering av tailwind-->
+        <section class="mb-5">
+            <h2 class="font-semibold mb-2 md:text-2xl">Utvärdering av Tailwind</h2>
+            <p class="mb-3">Jag tyckte att Tailwind var rätt enkel att använda, jag installerade den via CLI och föjde instruktionerna på Tailwinds webbplats. Det gjorde installationen smidig och
+                gick bra att förstå. Jag installerade även Tailwind CSS IntelliSense, vilket gjorde det enklare med alla klass-namn. Det gick rätt snabbt att komma igång med
+                att bygga upp en layout och design direkt i HTML-koden. Jag tyckte om de färdiga klasserna som man använder sig av till CSS, så det var smididgt att testa sig fram och 
+                få ett resultat direkt. 
+            </p>
+            <p>Det jag tyckte var lite utmanande i början var att få till text-storleken och vissa ställen att få till layouten med utrymme runt om, men efter man
+                jobbat med det en stund så blev det lite tydligare hur man ska tänka. Överlag så tyckte jag att det var ett bra ramverk som man kan få till snygga lösningar. 
+            </p>
+        </section>
+
+        <!--tabell för de olika filmerna-->
+        <section class="mb-8">
+        <h2 class="font-semibold mb-2 md:text-2xl">Tabell över filmer</h2>
+        <div class="overflow-x-auto border rounded-xl">
+            <table class="min-w-full border-collapse">
+                <thead class="bg-pink-300">
+                    <tr>
+                        <th class="border p-2 text-left">Filmtitel</th>
+                        <th class="border p-2 text-left">Beskrivning</th>
+                        <th class="border p-2 text-left">Katergori</th>
+                        <th class="border p-2 text-left">Sett</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd:bg-white even:bg-pink-200">
+                        <td class="border p-2 text-left">Insterstellar</td>
+                        <td class="border p-2 text-left">En grupp med astronauter reser genom ett maskhål för att hitta en ny planet för mänskligheten. </td>
+                        <td class="border p-2 text-left">Sci-fi</td>
+                        <td class="border p-2 text-left">Ja</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-pink-200">
+                        <td class="border p-2 text-left">Titanic</td>
+                        <td class="border p-2 text-left">En romantisk film om två personer från olika klasser i samhället som möts ombord på skeppet Titanic.</td>
+                        <td class="border p-2 text-left">Romantik</td>
+                        <td class="border p-2 text-left">Nej</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-pink-200">
+                        <td class="border p-2 text-left">How to lose a guy in 10 days</td>
+                        <td class="border p-2 text-left">En journalist försöker bli av med en man på tio dagar, det hon inte vet att han har ett liknande uppdrag som henne.</td>
+                        <td class="border p-2 text-left">Romantik</td>
+                        <td class="border p-2 text-left">Ja</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-pink-200">
+                        <td class="border p-2 text-left">Forest Gump</td>
+                        <td class="border p-2 text-left">Forest har ett unikt sätt att ta sig an världen och livet samt den amerikanska historien. </td>
+                        <td class="border p-2 text-left">Drama</td>
+                        <td class="border p-2 text-left">Ja</td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-pink-200">
+                        <td class="border p-2 text-left">Moneyball</td>
+                        <td class="border p-2 text-left">En baseballtränare använder sig av data och statistik för att bygga det bästa laget med en mindre budget än de andra lagen.</td>
+                        <td class="border p-2 text-left">Drama</td>
+                        <td class="border p-2 text-left">Nej</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </section>
+
+        <!--Formulär-->
+        <div>
+            <h2 class="font-semibold mb-2 md:text-2xl">Lägg till en film</h2>
+            <form class="space-y-4 p-6 border rounded-2xl">
+
+                <!--filmtiteln-->
+                <div>
+                <label for="title" class="block font-medium mb-1">Filmtitel</label>
+                <input id="title" type="text" placeholder="Skriv in titel på film..." class="border rounded w-full p-2">
+                </div>
+
+                <!--beskrivning av film-->
+                <div>
+                <label for="description" class="block font-medium mb-1">Beskrivning</label>
+                <textarea id="description" placeholder="Skriv en kort beskrivning av filmen..." class="border rounded w-full p-2"></textarea>
+                </div>
+
+                <!--lista över kategorier-->
+                <div>
+                <label for="category" class="block font-medium mb-1">Kategori</label>
+                <select id="category" class="border rounded w-full p-2">
+                    <option>Romantik</option>
+                    <option>Drama</option>
+                    <option>Sci-fi</option>
+                    <option>Action</option>
+                </select>
+                </div>
+
+                <!--checkbox om man sett film ja/nej-->
+                <div class="flex items-center gap-2">
+                <input id="watched" type="checkbox" class="h-4 w-4">
+                <label for="watched" class="font-medium mb-1">Sett filmen</label>
+                </div>
+
+                <!--knapp till formulär-->
+                <button type="submit" class="text-center text-sm border rounded bg-gray-200 p-2 md:p-3 font-medium hover:bg-gray-400">Lägg till</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

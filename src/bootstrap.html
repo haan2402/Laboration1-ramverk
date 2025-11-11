@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="bg-secondary">
+    <!--Navigeringen, med hjälp av bootstrap så gör jag en toggle meny för mobilskärm, döljer "meny" på större skärmar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-md-3">
+        <div class="container-fluid">
+        <a class="navbar-brand d-lg-none" href="#">MENY</a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item"><a class="nav-link" href="index.html">Startsida</a></li>
+                <li class="nav-item"><a class="nav-link active"  href="bootstrap.html">Bootstrap</a></li>
+                <li class="nav-item"><a class="nav-link"  href="tailwind.html">Tailwind</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!--innehåll för sidan, större skärmar ha en margin mellan meny-->
+    <main class="container-lg bg-white p-4 mb-md-3">
+        <h1 class="fs-3 mb-5 fw-bold">Bootstrap CSS-Ramverk</h1>
+        
+        <!--info om tailwind-->
+        <section class="mb-3">
+            <h2 class="fs-4">Om Bootstrap</h2>
+            <p><a href="https://getbootstrap.com/" target="_blank">Länk till Bootstraps webbplats</a></p>
+            <p>Bootstrap är ett komponentbaserat ramverk som har många färdiga UI-komponenter. Ramverket innehåller färdiga komponenter som exempelvis knappar, formulär, tabeller och navbars.
+                Bootstrap är ett poplulärt ramverk och är bra för att skapa responsiva och strukutrerade webbplatser. Fördelar med detta ramverk är att det finns mycket dokumentation om raverket samt 
+                snabb prototyping. Nackdelar är att det finns så mycket färdigt så det kan vara svårt att anpassa designen. 
+            </p>
+        </section>
+
+        <!--utvärdering av bootstrap-->
+        <section class="mb-3">
+            <h2 class="fs-4">Utvärdering av Bootstrap</h2>
+            <p>Jag har tyckt att det gått bra att arbeta med Bootstrap. Jag installerade via CDN på deras webbplats där jag infogade en link och en script länk. Dessa gjorde att jag kom åt alla
+                komponenter genom att lägga till olika klasser i HTML koden. Det fanns många olika alternativ för att skapa den design man önskar, och fanns olika alternativ för att göra sidan
+                responsiv. 
+            </p>
+            <p>Jag hade lite svårt i början att förstå hur alla klasser funkade tillsammans, men eftersom den fanns bra med dokumentation så gick det att få mycket tips därifrån. Jag tyckte det är
+                ett smidigt ramverk, och med ganska lite kod kunde man göra stora skillnader på sidan.
+            </p>
+        </section>
+
+        <!--tabell med olika filmer-->
+        <section class="mb-3">
+        <h2 class="fs-4">Tabell över filmer</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Filmtitel</th>
+                        <th>Beskrivning</th>
+                        <th>Katergori</th>
+                        <th>Sett</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Insterstellar</td>
+                        <td>En grupp med astronauter reser genom ett maskhål för att hitta en ny planet för mänskligheten. </td>
+                        <td>Sci-fi</td>
+                        <td>Ja</td>
+                    </tr>
+                    <tr>
+                        <td>Titanic</td>
+                        <td>En romantisk film om två personer från olika klasser i samhället som möts ombord på skeppet Titanic.</td>
+                        <td>Romantik</td>
+                        <td>Nej</td>
+                    </tr>
+                    <tr>
+                        <td>How to lose a guy in 10 days</td>
+                        <td>En journalist försöker bli av med en man på tio dagar, det hon inte vet att han har ett liknande uppdrag som henne.</td>
+                        <td>Romantik</td>
+                        <td>Ja</td>
+                    </tr>
+                    <tr>
+                        <td>Forest Gump</td>
+                        <td>Forest har ett unikt sätt att ta sig an världen och livet samt den amerikanska historien. </td>
+                        <td>Drama</td>
+                        <td>Ja</td>
+                    </tr>
+                    <tr>
+                        <td>Moneyball</td>
+                        <td>En baseballtränare använder sig av data och statistik för att bygga det bästa laget med en mindre budget än de andra lagen.</td>
+                        <td>Drama</td>
+                        <td>Nej</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </section>
+
+        <!--Formulär-->
+        <div class="mb-3">
+            <h2 class="fs-4">Lägg till en film</h2>
+            <form class="border border-secondary rounded p-3 p-md-5 bg-light">
+
+                <!--filmtiteln-->
+                <div class="mb-3">
+                <label for="title" class="form-label fw-bold">Filmtitel</label>
+                <input id="title" type="text" class="form-control border-secondary" placeholder="Skriv in titel på film...">
+                </div>
+
+                <!--beskrivning av film-->
+                <div class="mb-3">
+                <label for="description" class="form-label fw-bold">Beskrivning</label>
+                <textarea id="description" class="form-control border-secondary" rows="3" placeholder="Skriv en kort beskrivning av filmen..."></textarea>
+                </div>
+
+                <!--lista över kategorier-->
+                <div class="mb-3">
+                <label for="category" class="form-label fw-bold">Kategori</label>
+                <select id="category" class="form-select border-secondary">
+                    <option>Romantik</option>
+                    <option>Drama</option>
+                    <option>Sci-fi</option>
+                    <option>Action</option>
+                </select>
+                </div>
+
+                <!--checkbox om man sett film ja/nej-->
+                <div class="form-check mb-3">
+                <input id="watched" type="checkbox" class="form-check-input border-2 border-secondary">
+                <label for="watched" class="form-check-label fw-bold">Sett filmen</label>
+                </div>
+
+                <!--knapp till formulär-->
+                <button type="submit" class="btn btn-primary">Lägg till</button>
+            </form>
+        </div>
+    </main>
+    <!--Bootstrap js fil, behöver denna för funktionen till menyn att toggla mellan-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
